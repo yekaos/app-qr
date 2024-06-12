@@ -1,0 +1,18 @@
+.btnClose {
+  cursor: pointer;
+  background-color: transparent;
+  /* Cambiando tamaño de fuente cambia tamaño del botón */
+  font-size: var(--font-l);
+  letter-spacing: var(--letter-space);
+  margin: var(--space-2);
+  border: transparent var(--btn-border-solid-1);
+  border-radius: 50%;
+  transition: 0.1s ease;
+  text-transform: uppercase;
+  text-shadow: 0.5px 1px 4px #454545;
+  position: relative;
+}
+.btnClose:hover {
+  text-shadow: 1px 1px 2px white;
+}
+/* btnClose & más (botón para cerrar ventanas o ampliar contenido (se añade X o +)) */

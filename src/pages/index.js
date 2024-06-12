@@ -1,13 +1,15 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import Header from "../components/header"
 import Seo from "../components/seo"
+import Carousel from "../components/slider/Slider"
+import Layout from "../components/layout"
+
 const IndexPage = () => (
-<>
-<Header></Header>
-<Link></Link>
-<p>Paquita te quiero</p>
-</>
+  <Layout>
+    <Link></Link>
+    <Carousel></Carousel>
+  </Layout>
 )
+
 export const Head = () => <Seo title="Landing Page" />
 export default IndexPage

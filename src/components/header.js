@@ -1,32 +1,53 @@
 import * as React from "react"
-import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      margin: `0 auto`,
-      padding: `var(--space-4) var(--size-gutter)`,
-      alignItems: `center`,
-      justifyContent: `space-between`,
-      background: `#282828`,
-      class: `juas`
-    }}
-  >
-    <Link
-      to=""
-      style={{
-        fontSize: `var(--font-sm)`,
-        textDecoration: `none`,
-      }}
-    >
-      {siteTitle}
-    </Link>
-    <StaticImage
-      src="../images/logogeneradorqr.png"
-      alt="patrimonio"
-      width={350}
-      height={60}
-      />
-  </header>
-)
-export default Header
+import "./header.css"
+import "./layout.css"
+import { Link } from "gatsby"
+import BtnShare from "./buttons/BtnShare"
+
+const HeaderComponent = () => {
+  const [isOpen, setIsOpen] = React.useState(false)
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen)
+  }
+
+  return (
+    <div className="header">
+      <div>
+        <Link to="/">
+          <StaticImage
+            src="../images/icons/logogeneradorqr.png"
+            alt="patrimonio"
+            width={350}
+            height={80}
+            className="imagen animationFundido"
+          />
+        </Link>
+      </div>
+      <div className="menu-icon" onClick={toggleMenu}>
+        <div className={`hamburger ${isOpen ? "open" : ""}`}></div>
+      </div>
+      <div className={`navLinks ${isOpen ? "open" : ""}`}>
+        <div className="text-wrapper">
+          |&nbsp;&nbsp;&nbsp;
+          <Link to="/sobrenosotros">
+            <a className="styledLink subrayar animationFundido" href="">
+              SOBRE NOSOTROS
+            </a>
+          </Link>
+          &nbsp;&nbsp;&nbsp;|
+        </div>
+        <div className="text-wrapper">
+          <a className="styledLink subrayar animationFundido" href="">
+            CONTACTO
+          </a>
+          &nbsp;&nbsp;&nbsp;|
+        </div>
+        <BtnShare></BtnShare>
+      </div>
+    </div>
+  )
+}
+
+export default HeaderComponent

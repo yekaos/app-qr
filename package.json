@@ -1,20 +1,31 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "app-qrs",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Página de creación de QR",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Kyllian Arribas <kyllianarribas@gmail.com>",
   "dependencies": {
+    "downloadjs": "^1.4.7",
     "gatsby": "^5.13.5",
     "gatsby-plugin-image": "^3.13.1",
     "gatsby-plugin-manifest": "^5.13.1",
     "gatsby-plugin-sharp": "^5.13.1",
     "gatsby-source-filesystem": "^5.13.1",
     "gatsby-transformer-sharp": "^5.13.1",
+    "html-to-image": "^1.11.11",
+    "js-cookie": "^3.0.5",
+    "leaflet": "^1.9.4",
+    "qrcode.react": "^3.1.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-leaflet": "^4.2.1",
+    "react-share": "^5.1.0",
+    "react-slick": "^0.30.2",
+    "slick-carousel": "^1.8.1",
+    "styled-components": "^6.1.11"
   },
   "devDependencies": {
+    "babel-plugin-styled-components": "^2.1.4",
     "prettier": "^2.8.8"
   },
   "keywords": [
@@ -32,9 +43,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/yekaos/app-qr/"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/yekaos/"
   }
 }

@@ -14,7 +14,7 @@ function BtnShare() {
   return (
     <React.Fragment>
       <button className="btnShare animationFundido" onClick={toggleModal}>
-      <svg
+        <svg
             height="1.5em"
             fill="currentColor"
             xmlns="http://www.w3.org/2000/svg"

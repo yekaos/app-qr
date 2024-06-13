@@ -1,8 +1,9 @@
 // src/pages/avisolegal.js
 import React from 'react';
-import Halt3 from '../components/halt3';
+import Seo from "../components/seo";
+import Halt3 from '../components/header/halt3';
 import Footer from '../components/footer/Footer'
-import "../components/avisolegal.css";
+import "../components/css-pages/avisolegal.css";
 import BtnUp from '../components/buttons/BtnUp';
 
 const AvisoLegal = () => (
@@ -51,4 +52,5 @@ const AvisoLegal = () => (
     </>
 );
 
+export const Head = () => <Seo title="Aviso legal" />;
 export default AvisoLegal;

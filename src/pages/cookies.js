@@ -1,8 +1,9 @@
 // src/pages/cookies.js
 import React from 'react';
-import Halt3 from '../components/halt3';
+import Seo from "../components/seo";
+import Halt3 from '../components/header/halt3';
 import Footer from '../components/footer/Footer'
-import "../components/cookies.css";
+import "../components/css-pages/cookies.css";
 import BtnUp from '../components/buttons/BtnUp';
 
 const Cookies = () => (
@@ -52,4 +53,5 @@ const Cookies = () => (
     </>
 );
 
+export const Head = () => <Seo title="Cookies" />;
 export default Cookies;

@@ -1,11 +1,11 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Seo from "../components/seo";
-import Halt from "../components/halt";
+import Halt from "../components/header/halt";
 import MyComponent from "../components/comp/comp";
 import QRCode from 'qrcode.react';
 import { toPng, toJpeg, toSvg } from 'html-to-image';
 import download from 'downloadjs';
-import "../components/crearqr.css";
+import "../components/css-pages/crearqr.css";
 import Desplegable from '../components/desplegable/Desplegable';
 import Footer from "../components/footer/Footer";
 import BtnSave from "../components/buttons/BtnSave";
@@ -22,6 +22,7 @@ function Crearqr() {
   const qrRef = useRef(null);
   const [selectedOption, setSelectedOption] = useState('');
   const [inputValue, setInputValue] = useState('');
+  const [displayValue, setDisplayValue] = useState("")
 
   const handleColorChange = (color) => {
     setQrColor(color);
@@ -67,12 +68,16 @@ function Crearqr() {
 
   const opcion = (event) => {
     setSelectedOption(event.target.value);
+    setInputValue('');
     console.log('Selected:', event.target.value);
   };
 
-  const handleLocationSelect = (latlng) => {
-    setInputValue(`${latlng.lat}, ${latlng.lng}`);
-  };
+  const handleLocationSelect = latlng => {
+    // Genera la URL de Google Maps con las coordenadas seleccionadas
+    const mapsUrl = `https://www.google.com/maps?q=${latlng.lat},${latlng.lng}`
+    setInputValue(mapsUrl)
+    setDisplayValue(`${latlng.lat}, ${latlng.lng}`)
+  }
 
   let inputType = 'textarea';
   let inputPlaceholder = 'Introduce tu texto o url aquí:';
@@ -84,11 +89,11 @@ function Crearqr() {
       inputPlaceholder = 'Introduce la URL aquí:';
       inputPattern = 'https?://.*';
       break;
-    case 'geolocation':
-      inputType = 'text';
-      inputPlaceholder = 'Selecciona un punto en el mapa:';
-      inputPattern = '^(-?\\d+(\\.\\d+)?),\\s*(-?\\d+(\\.\\d+)?)$';
-      break;
+      case "geolocation":
+        inputType = "hidden"
+        inputPlaceholder = "Selecciona un punto en el mapa:"
+        inputPattern = "^(-?\\d+(\\.\\d+)?),\\s*(-?\\d+(\\.\\d+)?)$"
+        break;
     case 'image':
       inputType = 'file';
       inputPlaceholder = 'Selecciona una imagen:';
@@ -165,7 +170,10 @@ function Crearqr() {
               <br />
               <div className="contenido2">
                 <p>Contenido del QR:</p>
-                <p>{inputValue}</p><br />
+                <p>
+                  {selectedOption === "geolocation" ? displayValue : inputValue}
+                </p>
+                <br />
               </div>
               <BtnSave />
               <br />

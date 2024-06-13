@@ -2,13 +2,13 @@ import React, { useState, useEffect } from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import "../buttons/buttons.css"
 
-function BtnUp({ message }) {
+function BtnUp({ onClick }) {
   const [isVisible, setIsVisible] = useState(false)
 
   // Mostrar el botón cuando se desplaza hacia abajo
   useEffect(() => {
     const toggleVisibility = () => {
-      if (window.pageYOffset > 300) {
+      if (window.pageYOffset > 50) {
         setIsVisible(true)
       } else {
         setIsVisible(false)

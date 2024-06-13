@@ -32,6 +32,8 @@ label {
     display:none
 }
 .makuhita{
+  font-family: var(--font-text);
+  text-shadow: 1px 1px 1px  black;
   margin-top: 15px;
 }
 @media (max-width: 500px) {

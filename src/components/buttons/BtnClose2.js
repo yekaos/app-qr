@@ -1,5 +1,5 @@
 import React from "react"
-import "../buttons/BtnClose.css"
+import "../buttons/buttons.css"
 
 function BtnClose2({ onClick }) {
   return (

@@ -177,7 +177,7 @@
     right: 4%;
   }
   .imagen {
-    content: url(../images/icons/logogeneradorqr.png);
+    content: url(../../images/icons/logogeneradorqr.png);
     width: 240px;
     height: 60px;
     margin-bottom: 1em;
@@ -186,7 +186,7 @@
     width: 1024px;
   }
   .halt2 .imagen {
-    content: url(../images/icons/logogeneradorqr.png);
+    content: url(../../images/icons/logogeneradorqr.png);
     width: 290px;
   }
   .halt2 .navLinks {
@@ -229,7 +229,7 @@
   }
 
   .imagen {
-    content: url(../images/icons/logogeneradorqr.png);
+    content: url(../../images/icons/logogeneradorqr.png);
     width: 200px;
     height: 50px;
     margin-bottom: 1em;
@@ -238,7 +238,7 @@
     width: 412px;
   }
   .halt2 .imagen {
-    content: url(../images/icons/logogeneradorqr.png);
+    content: url(../../images/icons/logogeneradorqr.png);
     width: 200px;
   }
   .halt2 .navLinks {

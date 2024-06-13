@@ -1,7 +1,5 @@
 import React, { useState } from "react"
-import { StaticImage } from "gatsby-plugin-image"
 import "../buttons/buttons.css"
-import BtnClose from "./BtnClose"
 import "../modals/modal.css"
 import {
   FacebookShareButton,

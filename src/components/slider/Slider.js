@@ -1,6 +1,5 @@
 import React from "react"
 import Slider from "react-slick"
-import { GatsbyImage } from "gatsby-plugin-image"
 import image1 from "../../images/slider/SLID1parterre.jpg"
 import image2 from "../../images/slider/SLID2bodega.jpg"
 import image3 from "../../images/slider/SLID3faluas.jpg"

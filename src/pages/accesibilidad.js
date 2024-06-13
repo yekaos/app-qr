@@ -1,8 +1,9 @@
 // src/pages/accesibilidad.js
 import React from 'react';
-import Halt3 from '../components/halt3';
+import Seo from "../components/seo";
+import Halt3 from '../components/header/halt3';
 import Footer from '../components/footer/Footer'
-import "../components/accesibilidad.css";
+import "../components/css-pages/accesibilidad.css";
 import BtnUp from '../components/buttons/BtnUp';
 
 const Accesibilidad = () => (
@@ -65,4 +66,5 @@ const Accesibilidad = () => (
     </>
 );
 
+export const Head = () => <Seo title="Accesibilidad" />;
 export default Accesibilidad;

@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image" // Importa StaticImage
 import "./header.css"
-import BtnExit from "../components/buttons/BtnExit"
+import BtnExit from "../buttons/BtnExit"
 
 const Halt = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -19,7 +19,7 @@ const Halt = () => {
     <div className="halt2" id="myHeader">
       <Link to="/">
         <StaticImage // Usa StaticImage para mostrar la imagen
-          src="../images/icons/logogeneradorqr.png"
+          src="../../images/icons/logogeneradorqr.png"
           alt="patrimonio"
           width={350}
           height={80}

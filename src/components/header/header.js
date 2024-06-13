@@ -1,9 +1,9 @@
 import * as React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import "./header.css"
-import "./layout.css"
+import "../layout.css"
 import { Link } from "gatsby"
-import BtnShare from "./buttons/BtnShare"
+import BtnShare from "../buttons/BtnShare"
 
 const HeaderComponent = () => {
   const [isOpen, setIsOpen] = React.useState(false)
@@ -17,7 +17,7 @@ const HeaderComponent = () => {
       <div>
         <Link to="/">
           <StaticImage
-            src="../images/icons/logogeneradorqr.png"
+            src="../../images/icons/logogeneradorqr.png"
             alt="patrimonio"
             width={350}
             height={80}

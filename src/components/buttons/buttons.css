@@ -141,7 +141,7 @@
   /* Cambiando tamaño de fuente cambia tamaño del botón */
   font-size: var(--font-l);
   letter-spacing: var(--letter-space);
-  margin: var(--space-2);
+  margin-top: -2%;
   border: transparent var(--btn-border-solid-1);
   border-radius: 50%;
   transition: 0.1s ease;
@@ -250,6 +250,10 @@
   filter: drop-shadow(0.5px 0.5px 4px var(--color-secondary));
   transform: scale(1.2);
   transition: 0.1s ease;
+}
+.hamtaro{
+  font-weight: bold;
+  text-decoration: underline;
 }
 /* btnInfo (botón para guardar contenido) */
 /* btnSave (botón para guardar contenido) */
@@ -413,7 +417,7 @@
   position: fixed;
   bottom: 20px;
   right: 20px;
-  z-index: 1000;
+  z-index: 1;
   width: 60px;
 }
 

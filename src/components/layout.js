@@ -1,9 +1,10 @@
 import * as React from "react"
 import { useState, useEffect } from "react"
-import Header from "./header"
+import Header from "./header/header"
 import Footer from "./footer/Footer"
 import Loader from "./Loader"
 import "./layout.css"
+import CookieConsent from "../components/cookiecon/CookieConsent"
 
 const Layout = ({ children }) => {
   const [loading, setLoading] = useState(true)
@@ -24,6 +25,7 @@ const Layout = ({ children }) => {
         <>
           <Header />
           <main>{children}</main>
+          <CookieConsent/>
           <Footer />
         </>
       )}

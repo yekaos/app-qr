@@ -1,9 +1,8 @@
 import React from "react"
-import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import "./footer.css"
 
-const Footer = children => {
+const Footer = () => {
   return (
     <div className="footer-escritorio">
       <StaticImage
@@ -11,9 +10,9 @@ const Footer = children => {
         alt="Thumbnail TANDEM"
         src="../../images/thumbnail-TANDEM.png"
       />
-      <a href="#">
+      <i>
         <div className="logotipo animationFundido" />
-      </a>
+      </i>
       <div className="redes-sociales animationFundido">
         <a
           href="https://es.linkedin.com/company/patrimonionacional"
